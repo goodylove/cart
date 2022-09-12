@@ -13,21 +13,65 @@
     <title>E-commerce product page</title>
   </head>
   <body>
-    <!-- header section -->
-    <nav>
-      <div>
-        <span> <i class="fas fa-bars"></i></span>
-        <span>Sneakers</span>
-      </div>
-      <div>
-        <span><i class="fas fa-shopping-cart"></i></span>
-        <span>
-          <img
-            src="./imges/testimonal.3.jpg"
-            alt="profile-image"
-            class="h-3 w-3 rounded-full"
-        /></span>
+    <!-- header section starts here-->
+    <!-- <header class="flex justify-center items-center w-auto h-auto"> -->
+    <nav class="flex justify-center items-center fixed w-full bg-[#ffff]">
+      <div class="flex justify-between w-full h-auto p-5">
+        <div class="flex w-full justify-evenly w-5/12 items-center">
+          <span> <i class="fas fa-bars text-xl"></i></span>
+          <span class="font-bold text-2xl">Shirts</span>
+        </div>
+        <div class="flex items-center justify-center px-2">
+          <span class="px-3"><i class="fas fa-shopping-cart"></i></span>
+          <span>
+            <img
+              src="./imges/testimonal.3.jpg"
+              alt="profile-image"
+              class="h-3 w-3 rounded-full"
+          /></span>
+        </div>
       </div>
     </nav>
+    <!-- </header> -->
+    <!-- header section end here -->
+    <!-- slider sectoins starts here -->
+    <section class="pt-20">
+      <div>
+        <div class="reletive">
+          <div>
+            <img src="./imges/shirt2.jpg" alt="" />
+          </div>
+          <!-- left and right icon -->
+          <div class="absolute top-[16.5rem] w-full">
+            <i
+              class="fas fa-arrow-left absolute left-[15px] hover:bg-sky-500 rounded-full w-7 p-1 h-7"
+            ></i>
+            <i
+              class="fas fa-arrow-right absolute left-[90%] hover:bg-sky-500 rounded-full w-7 p-1 h-7"
+            ></i>
+          </div>
+        </div>
+        <div class="p-3">
+          <span class="text-orange-500 font-bold">SHIRTS COMPANY</span>
+        </div>
+        <div class="flex justify-center p-3">
+          <p class="text-sm font-bold">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
+            quod eveniet dolorem atque, molestiae eaque illo laudantium
+            consectetur expedita itaque?
+          </p>
+        </div>
+        <div>
+          <div>
+            <span class="font-bold text-2xl">$125.00</span>
+            <span class="rounded-lg h-5 bg-pink-100 text-orange-400">50%</span>
+          </div>
+          <div>
+            <span>$250.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- slider sections ends here -->
   </body>
 </html>
