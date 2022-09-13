@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="./javascript files/shirts.js" defer></script>
+    <script src="./javascript files/cap.js" defer></script>
+    <script src="./javascript files/glasses.js" defer></script>
+    <script src="./javascript files/shoe.js" defer></script>
+    <script src="./javascript files/wristwatch.js" defer></script>
+    <title>E-commerce product page</title>
+  </head>
+  <body>
+    <!-- header section starts here-->
+
+    <nav class="flex justify-center items-center fixed w-full bg-[#ffff]">
+      <div class="flex justify-between w-full h-auto p-5">
+        <div class="flex w-full justify-evenly w-5/12 items-center">
+          <span> <i class="fas fa-bars text-xl"></i></span>
+          <span class="font-bold text-2xl">Shirts</span>
+        </div>
+        <div class="flex items-center justify-center px-2">
+          <span class="px-3 relative"
+            ><i class="fas fa-shopping-cart"></i>
+            <span
+              class="absolute bg-red-500 w-4 h-4 rounded-full left-5 text-white p-1 bottom-3 flex justify-center items-center cart text-sm"
+              >0</span
+            >
+          </span>
+          <div>
+            <img
+              src="./imges/testimonal.3.jpg"
+              alt="profile-image"
+              class="h-3 w-3 rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- header section end here -->
+    <!-- shirts section -->
+    <div class="pt-20 flex justify-center w-auto">
+      <div class="shirt-con"></div>
+    </div>
+    <!-- shirts end here -->
+    <!-- bags section starts here -->
+    <div class="pt-20 flex justify-center w-auto">
+      <div class="bag-con"></div>
+    </div>
+    <!-- bags ends here -->
+    <!-- glass section starts here -->
+    <div class="pt-20 flex justify-center w-auto">
+      <div class="glasses-con"></div>
+    </div>
+    <!-- glass ends here -->
+  </body>
+</html>
