@@ -1,18 +1,21 @@
-const bagCon = document.querySelector(".bag-con");
+import allItems from "./JSON.js";
+console.log(allItems);
 
-const allBags = [
-  { bags: "bags/bag1.png", price: 5000 },
-  { bags: "bags/bag2.png", price: 135 },
-  { bags: "bags/bag3.png", price: 6700 },
-  { bags: "bags/bag4.png", price: 13500 },
-  { bags: "bags/bag5.png", price: 11500 },
-  { bags: "bags/pink.png", price: 12500 },
+const shirtCon = document.querySelector(".shirt-con");
+
+const allShirts = [
+  { shirt: "imges/shirt1.jpg", price: 125.0 },
+  { shirt: "imges/shirt2.jpg", price: 135.0 },
+  { shirt: "imges/shirt3.jpg", price: 125.0 },
+  { shirt: "imges/shirt4.jpg", price: 135.0 },
+  { shirt: "imges/shirt5.jpg", price: 115.0 },
+  { shirt: "imges/shirt7.jpg", price: 125.0 },
 ];
 function shirtsContain() {
-  const showAllBags = allBags.map((shirts) => {
+  const showAllShirts = allShirts.map((shirts) => {
     return ` <div class="py-2">
    <div>
-     <img src="${shirts.bags}" alt="" class="w-[500px] h-[300px]" />
+     <img src="${shirts.shirt}" alt="" class="w-[500px] h-[300px]" />
    </div>
    <div></div>
    <div class="flex justify-between w-[100%] items-center p-3">
@@ -46,7 +49,7 @@ function shirtsContain() {
    </div>
  </div>`;
   });
-  shirtCon.innerHTML = showAllBags.join("");
+  shirtCon.innerHTML = showAllShirts.join("");
   const subItem = document.querySelector(".sub");
   const addItem = document.querySelector(".add");
   //   const content = document.querySelector(".content");
