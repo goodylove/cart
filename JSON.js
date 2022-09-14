@@ -1,6 +1,45 @@
 const allItems = [
   [
     {
+      imgSrc: "wristwatch/1.jpg",
+      name: "Black Leather",
+      price: "$50",
+      discount: "$65",
+    },
+    {
+      imgSrc: "wristwatch/2.jpg",
+      name: "Plain Watch",
+      price: "$15",
+      discount: "$20",
+    },
+    {
+      imgSrc: "wristwatch/3.jpg",
+      name: "Silver Watch",
+      price: "$70",
+      discount: "$80",
+    },
+    {
+      imgSrc: "wristwatch/4.jpg",
+      name: "Smart Black",
+      price: "$40",
+      discount: "$50",
+    },
+    {
+      imgSrc: "wristwatch/pink watch.jpg",
+      name: "Pink Watch",
+      price: "$75",
+      discount: "$105",
+    },
+    {
+      imgSrc: "wristwatch/product 10.jpg",
+      name: "Phone Watch",
+      price: "$77",
+      discount: "$100",
+    },
+  ],
+
+  [
+    {
       imgSrc: "bags/bag1.png",
       name: "Yellow School Bag",
       price: "$55",
@@ -38,12 +77,12 @@ const allItems = [
     },
   ],
   [
-    { shirt: "imges/shirt1.jpg", price: 125.0 },
-    { shirt: "imges/shirt2.jpg", price: 135.0 },
-    { shirt: "imges/shirt3.jpg", price: 125.0 },
-    { shirt: "imges/shirt4.jpg", price: 135.0 },
-    { shirt: "imges/shirt5.jpg", price: 115.0 },
-    { shirt: "imges/shirt7.jpg", price: 125.0 },
+    { shirt: "./imges/shirt1.jpg", price: 125.0 },
+    { shirt: "./imges/shirt2.jpg", price: 135.0 },
+    { shirt: "./imges/shirt3.jpg", price: 125.0 },
+    { shirt: "./imges/shirt4.jpg", price: 135.0 },
+    { shirt: "./imges/shirt5.jpg", price: 115.0 },
+    { shirt: "./imges/shirt7.jpg", price: 125.0 },
   ],
   [
     {

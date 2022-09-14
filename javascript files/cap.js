@@ -1,23 +1,23 @@
-const bagCon = document.querySelector(".bag-con");
+const capCon = document.querySelector(".cap-con");
 
-const allBags = [
-  { bags: "bags/bag1.png", price: 5000 },
-  { bags: "bags/bag2.png", price: 135 },
-  { bags: "bags/bag3.png", price: 6700 },
-  { bags: "bags/bag4.png", price: 13500 },
-  { bags: "bags/bag5.png", price: 11500 },
-  { bags: "bags/pink.png", price: 12500 },
+const allCaps = [
+  { caps: "cap/black.jpeg", price: 5000 },
+  { caps: "cap/blue.jpeg", price: 135 },
+  { caps: "cap/white.jpeg", price: 6700 },
+  { caps: "cap/red.jpeg", price: 13500 },
+  { caps: "cap/lemon.jpeg", price: 11500 },
+  { caps: "cap/yellow.jpeg", price: 12500 },
 ];
 function shirtsContain() {
-  const showAllBags = allBags.map((shirts) => {
-    return ` <div class="py-2">
+  const showAllCap = allCaps.map((shirts) => {
+    return ` <div class="p-2 shadow-md  my-3">
    <div>
-     <img src="${shirts.bags}" alt="" class="w-[500px] h-[300px]" />
+     <img src="${shirts.caps}" alt="" class="w-[300px] h-[200px]" />
    </div>
    <div></div>
    <div class="flex justify-between w-[100%] items-center p-3">
      <div class="flex items-center justify-center">
-       <span class="font-bold text-2xl">${shirts.price}00</span>
+       <span class="font-bold text-xl">${shirts.price}00</span>
        <span class="rounded-lg h-6 px-1 w-10 bg-pink-100 text-orange-400"
          >50%</span
        >
@@ -46,7 +46,7 @@ function shirtsContain() {
    </div>
  </div>`;
   });
-  shirtCon.innerHTML = showAllBags.join("");
+  capCon.innerHTML = showAllCap.join("");
   const subItem = document.querySelector(".sub");
   const addItem = document.querySelector(".add");
   //   const content = document.querySelector(".content");
