@@ -1,43 +1,67 @@
 const capCon = document.querySelector(".cap-con");
 
 const allCaps = [
-  { caps: "cap/black.jpeg", price: 5000 },
-  { caps: "cap/blue.jpeg", price: 135 },
-  { caps: "cap/white.jpeg", price: 6700 },
-  { caps: "cap/red.jpeg", price: 13500 },
-  { caps: "cap/lemon.jpeg", price: 11500 },
-  { caps: "cap/yellow.jpeg", price: 12500 },
+  {
+    caps: "cap/black.jpeg",
+    name: "Bobmarley cap",
+    price: "$24",
+    discount: "$30",
+  },
+  {
+    caps: "cap/blue.jpeg",
+    name: "Blue Face Cap",
+    price: "$15",
+    discount: "$20",
+  },
+  {
+    caps: "cap/white.jpeg",
+    name: "White Face Cap",
+    price: "$30",
+    discount: "$40",
+  },
+  { caps: "cap/red.jpeg", name: "Red Face Cap", price: "$25", discount: "$35" },
+  {
+    caps: "cap/lemon.jpeg",
+    name: "White Face Cap",
+    price: "$30",
+    discount: "$40",
+  },
+  {
+    caps: "cap/yellow.jpeg",
+    name: "Yellow Round Cap",
+    price: "$17",
+    discount: "$23",
+  },
 ];
 function shirtsContain() {
   const showAllCap = allCaps.map((shirts) => {
     return ` <div class="p-2 shadow-md  my-3">
-   <div>
+   
      <img src="${shirts.caps}" alt="" class="w-[300px] h-[200px]" />
-   </div>
-   <div></div>
+  
+   
    <div class="flex justify-between w-[100%] items-center p-3">
-     <div class="flex items-center justify-center">
-       <span class="font-bold text-xl">${shirts.price}00</span>
-       <span class="rounded-lg h-6 px-1 w-10 bg-pink-100 text-orange-400"
-         >50%</span
-       >
+     <div class="flex items-center justify-center flex-col">
+     <span>${shirts.name}</span>
+       <span class="font-bold text-xl">$${shirts.price}</span>
+       
      </div>
      <div>
-       <span class="text-gray-200"><strike>$250.00</strike></span>
+       <span class="text-gray-200"><strike>${shirts.discount}</strike></span>
      </div>
    </div>
    <div class="flex pl-2 w-auto justify-center">
      <button
        type="button"
-       class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn1 hidden"
+       class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn5 hidden"
      >
-       <span class="text-orange-500 text-xl font-bold sub">-</span>
-       <span class="content">0</span>
-       <span class="text-orange-500 text-xl font-bold add">+</span>
+       <span class="text-orange-500 text-xl font-bold sub-cap">-</span>
+       <span class="content-cap">0</span>
+       <span class="text-orange-500 text-xl font-bold add-cap">+</span>
      </button>
      <button
        type="button"
-       class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn2"
+       class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn6"
      >
        <span class="flex justify-center w-full items-center text-white"
          ><i class="fas fa-shopping-cart px-4"></i>Add to cart</span
@@ -47,45 +71,45 @@ function shirtsContain() {
  </div>`;
   });
   capCon.innerHTML = showAllCap.join("");
-  const subItem = document.querySelector(".sub");
-  const addItem = document.querySelector(".add");
+  const subItemCap = document.querySelector(".sub-cap");
+  const addItemCap = document.querySelector(".add-cap");
   //   const content = document.querySelector(".content");
   const cart = document.querySelector(".cart");
   //   const btn1 = document.querySelector(".btn1");
-  const btn2 = document.querySelectorAll(".btn2");
+  const btn6 = document.querySelectorAll(".btn6");
 
-  btn2.forEach((element) => {
+  btn6.forEach((element) => {
     element.addEventListener("click", () => {
       console.log("working");
       const btnCon = element.parentElement;
-      const btn1 = btnCon.querySelector(".btn1");
-      const content = btnCon.querySelector(".content");
+      const btn5 = btnCon.querySelector(".btn5");
+      const contentCap = btnCon.querySelector(".content-cap");
 
-      console.log(btn1);
-      btn1.style.display = "flex";
+      // console.log(btn1);
+      btn5.style.display = "flex";
       element.style.display = "none";
       cart.textContent++;
-      content.textContent++;
+      contentCap.textContent++;
     });
   });
 }
 
 shirtsContain();
-// addItem.addEventListener("click", () => {
+// addItemCap.addEventListener("click", () => {
 //   addToCart();
 //   if (cart.textContent == 0 || cart.textContent > 0) {
 //     cart.textContent++;
-//     content.textContent++;
+//     contentCap.textContent++;
 //   }
 // });
-// subItem.addEventListener("click", () => {
+// subItemCap.addEventListener("click", () => {
 //   addToCart();
-//   if (content.textContent < 0 || cart.textContent < 0) {
+//   if (contentCap.textContent < 0 || cart.textContent < 0) {
 //     cart.textContent = 0;
-//     content.textContent = 0;
+//     contentCap.textContent = 0;
 //   }
 //   if (cart.textContent > 0) {
 //     cart.textContent--;
-//     content.textContent--;
+//     contentCap.textContent--;
 //   }
 // });

@@ -1,43 +1,68 @@
 const bagCon = document.querySelector(".bag-con");
+const oderBag = [];
 
 const allBags = [
-  { bags: "bags/bag1.png", price: 5000 },
-  { bags: "bags/bag2.png", price: 135 },
-  { bags: "bags/bag3.png", price: 6700 },
-  { bags: "bags/bag4.png", price: 13500 },
-  { bags: "bags/bag5.png", price: 11500 },
-  { bags: "bags/pink.png", price: 12500 },
+  {
+    bags: "bags/bag1.png",
+    name: "Yellow School Bag",
+    price: "$55",
+    discount: "$60",
+  },
+  {
+    bags: "bags/bag2.png",
+    name: "Blue School Bag",
+    price: "$55",
+    discount: "$60",
+  },
+  { bags: "bags/bag3.png", name: "Simple Bag", price: "$25", discount: "$30" },
+  {
+    bags: "bags/bag4.png",
+    name: "Steelblue Bag",
+    price: "$29",
+    discount: "$35",
+  },
+  {
+    bags: "bags/bag5.png",
+    name: "school bag",
+    price: "$100",
+    discount: "$150",
+  },
+  {
+    bags: "bags/pink.png",
+    name: "Yellow Suitcase",
+    price: "$100",
+    discount: "$150",
+  },
 ];
 function shirtsContain() {
   const showAllBags = allBags.map((shirts) => {
     return ` <div class="p-2 my-3 shadow-md">
-   <div>
+  
      <img src="${shirts.bags}" alt="" class="w-[300px] h-[200px]" />
-   </div>
-   <div></div>
+  
+  
    <div class="flex justify-between w-[100%] items-center p-3">
-     <div class="flex items-center justify-center">
-       <span class="font-bold text-xl">${shirts.price}00</span>
-       <span class="rounded-lg h-6 px-1 w-10 bg-pink-100 text-orange-400"
-         >50%</span
-       >
+     <div class="flex items-center justify-center flex-col w-[45%]">
+     <spa> ${shirts.name}</span>
+       <span class="font-bold text-xl">${shirts.price}</span>
+      
      </div>
      <div>
-       <span class="text-gray-200"><strike>$250.00</strike></span>
+       <span class="text-gray-200"><strike>${shirts.discount}</strike></span>
      </div>
    </div>
    <div class="flex pl-2 w-auto justify-center">
      <button
        type="button"
-       class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn1 hidden"
+       class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn7 hidden"
      >
-       <span class="text-orange-500 text-xl font-bold sub">-</span>
-       <span class="content">0</span>
-       <span class="text-orange-500 text-xl font-bold add">+</span>
+       <span class="text-orange-500 text-xl font-bold sub-bag">-</span>
+       <span class="content-bag">0</span>
+       <span class="text-orange-500 text-xl font-bold add-bag">+</span>
      </button>
      <button
        type="button"
-       class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn2"
+       class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn8"
      >
        <span class="flex justify-center w-full items-center text-white"
          ><i class="fas fa-shopping-cart px-4"></i>Add to cart</span
@@ -47,25 +72,24 @@ function shirtsContain() {
  </div>`;
   });
   bagCon.innerHTML = showAllBags.join("");
-  const subItem = document.querySelector(".sub");
-  const addItem = document.querySelector(".add");
+  const subItemBag = document.querySelector(".sub-bag");
+  const addItemBag = document.querySelector(".add-bag");
   //   const content = document.querySelector(".content");
   const cart = document.querySelector(".cart");
   //   const btn1 = document.querySelector(".btn1");
-  const btn2 = document.querySelectorAll(".btn2");
+  const btn8 = document.querySelectorAll(".btn8");
 
-  btn2.forEach((element) => {
+  btn8.forEach((element) => {
     element.addEventListener("click", () => {
       console.log("working");
       const btnCon = element.parentElement;
-      const btn1 = btnCon.querySelector(".btn1");
-      const content = btnCon.querySelector(".content");
+      const btn7 = btnCon.querySelector(".btn7");
+      const contentBag = btnCon.querySelector(".content-bag");
 
-      console.log(btn1);
-      btn1.style.display = "flex";
+      btn7.style.display = "flex";
       element.style.display = "none";
       cart.textContent++;
-      content.textContent++;
+      contentBag.textContent++;
     });
   });
 }

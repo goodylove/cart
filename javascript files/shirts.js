@@ -1,30 +1,56 @@
 const shirtCon = document.querySelector(".shirt-con");
-
+const orderShirts = [];
 const allShirts = [
-  { shirt: "imges/shirt1.jpg", price: 125.0 },
-  { shirt: "imges/shirt2.jpg", price: 135.0 },
-  { shirt: "imges/shirt3.jpg", price: 125.0 },
-  { shirt: "imges/shirt4.jpg", price: 135.0 },
-  { shirt: "imges/shirt5.jpg", price: 115.0 },
-  { shirt: "imges/shirt7.jpg", price: 125.0 },
+  {
+    shirt: "imges/shirt1.jpg",
+    name: "Vintage",
+    price: "$150",
+    discount: "$280",
+  },
+  {
+    shirt: "imges/shirt2.jpg",
+    name: "Plain Shirt",
+    price: "$200",
+    discount: "$250",
+  },
+  {
+    shirt: "imges/shirt3.jpg",
+    name: "Fancy Shirt",
+    price: "$100",
+    discount: "$150",
+  },
+  {
+    shirt: "imges/shirt4.jpg",
+    name: "Flower Shirt",
+    price: "$200",
+    discount: "$210",
+  },
+  {
+    shirt: "imges/shirt5.jpg",
+    name: "Fancy Shirt",
+    price: "$100",
+    discount: "$150",
+  },
+  {
+    shirt: "imges/shirt7.jpg",
+    name: "Vintage",
+    price: "$150",
+    discount: "$280",
+  },
 ];
 function shirtsContain() {
   const showAllShirts = allShirts.map((shirts) => {
     return ` <div class="p-2 shadow-md  my-3 ">
-   <div>
-     <img src="${shirts.shirt}" alt="" class="w-[300px] h-[200px]" />
-   </div>
-   
    <div class="lg:flex flex-col">
+    <img src="${shirts.shirt}" alt="" class="w-[300px] h-[200px] shirt" />
    <div class="flex justify-between w-[100%] items-center p-3">
-     <div class="flex items-center justify-center">
-       <span class="font-bold text-xl">${shirts.price}00</span>
-       <span class="rounded-lg h-6 px-1 w-10 bg-pink-100 text-orange-400"
-         >50%</span
-       >
+     <div class="flex items-center justify-center flex-col">
+     <span class="shirt-name">${shirts.name}</span>
+       <span class="font-bold text-xl price">${shirts.price}</span>
+       
      </div>
      <div>
-       <span class="text-gray-200"><strike>$250.00</strike></span>
+       <span class="text-gray-200"><strike>${shirts.discount}</strike></span>
      </div>
    </div>
    <div class="flex pl-2 w-auto justify-center">
@@ -57,17 +83,62 @@ function shirtsContain() {
   const btn2 = document.querySelectorAll(".btn2");
 
   btn2.forEach((element) => {
+    const btnCon = element.parentElement;
+    const generlP = btnCon.parentElement;
+    const nameShirt = generlP.querySelector(".shirt-name");
+    const shirtPrice = generlP.querySelector(".price");
+    const shirtImg = generlP.querySelector(".shirt");
+    let getShirts;
     element.addEventListener("click", () => {
-      console.log("working");
-      const btnCon = element.parentElement;
+      getShirts = [
+        [nameShirt.textContent, shirtPrice.textContent, shirtImg.src],
+      ];
+
       const btn1 = btnCon.querySelector(".btn1");
       const content = btnCon.querySelector(".content");
 
-      console.log(btn1);
       btn1.style.display = "flex";
       element.style.display = "none";
       cart.textContent++;
       content.textContent++;
+    });
+
+    cart.addEventListener("click", () => {
+      const showShirts = getShirts.map((p) => {
+        return ` <div class="p-2 shadow-md  my-3 ">
+   <div class="lg:flex flex-col">
+    <img src="${shirts.shirt}" alt="" class="w-[300px] h-[200px] shirt" />
+   <div class="flex justify-between w-[100%] items-center p-3">
+     <div class="flex items-center justify-center flex-col">
+     <span class="shirt-name">${shirts.name}</span>
+       <span class="font-bold text-xl price">${shirts.price}</span>
+       
+     </div>
+     <div>
+      
+     </div>
+   </div>
+   <div class="flex pl-2 w-auto justify-center">
+     <button
+       type="button"
+       class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn1 hidden"
+     >
+       <span class="text-orange-500 text-xl font-bold sub">-</span>
+       <span class="content">0</span>
+       <span class="text-orange-500 text-xl font-bold add">+</span>
+     </button>
+     <button
+       type="button"
+       class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn2"
+     >
+       <span class="flex justify-center w-full items-center text-white"
+         ><i class="fas fa-shopping-cart px-4"></i>Add to cart</span
+       >
+     </button>
+   </div>
+   </div>
+ </div>`;
+      });
     });
   });
 }
@@ -91,3 +162,9 @@ shirtsContain();
 //     content.textContent--;
 //   }
 // });
+
+// for (let index = 0; index < allShirts.length; index++) {
+//   btn2[index].addEventListener("click", () => {
+//     orderShirts.push(allShirts[index]);
+//   });
+// }
