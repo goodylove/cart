@@ -30,11 +30,11 @@
             <ul
               class="flex justify-between items-center w-full gap-1 text-xl font-bold"
             >
-              <li>Home</li>
-              <li>Glasses</li>
-              <li>Bags</li>
-              <li>Caps</li>
-              <li>Shirts</li>
+              <li class="home"><a href="#">Home</a></li>
+              <li class="glas"><a href="#">Glasses</a></li>
+              <li class="big"><a href="#">Bags</a></li>
+              <li class="capss"><a href="#">Caps</a></li>
+              <li class="shit"><a href="#">Shirts</a></li>
             </ul>
           </div>
         </div>
@@ -59,12 +59,13 @@
       </div>
     </nav>
     <!-- header section end here -->
-    <div class="pt-20 relative">
+    <div class="pt-20 relative" id="home">
       <div>
         <!-- shirts section -->
         <div class="flex justify-center w-auto">
           <div
             class="shirt-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            id="shit"
           ></div>
         </div>
         <!-- shirts end here -->
@@ -74,6 +75,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="bag-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            id="bag"
           ></div>
         </div>
         <!-- bags ends here -->
@@ -82,6 +84,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="glasses-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            id="glass"
           ></div>
         </div>
         <!-- glass ends here -->
@@ -95,6 +98,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="watch-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            id="watch"
           ></div>
         </div>
         <!-- wristwatch  ends here-->
@@ -102,22 +106,31 @@
         <div class="flex justify-center w-auto">
           <div
             class="cap-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            id="cap"
           ></div>
         </div>
         <!-- caps ends here -->
         <div class="w-full h-full flex justify-center">
-          <div class="h-full w-full absolute top-20 bg-gray-400 hidden show-c">
-            <div class="show flex justify-center"></div>
+          <div
+            class="h-full w-full absolute top-20 bg-sky-500 z-50 hidden show-c"
+          >
+            <div class="show flex justify-evenly w-auto"></div>
+            <div class="flex justify-center">
+              <button
+                class="bg-orange-500 w-[30%] rounded-md text-white h-[35px]"
+              >
+                <span>total price =</span>
+                <span class="total-shirt"></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="./javascript files/cap.js"></script>
-    <script src="./javascript files/glasses.js"></script>
-    <script src="./javascript files/shirts.js"></script>
-    <!-- <script src="./javascript files/shoe.js"></script> -->
-
-    <script src="./javascript files/bag.js"></script>
+    <script src="./javascript files/shirts.js" type="module"></script>
+    <script src="./javascript files/bag.js" type="module"></script>
+    <script src="./javascript files/cap.js" type="module"></script>
+    <script src="./javascript files/glasses.js" type="module"></script>
   </body>
 </html>
