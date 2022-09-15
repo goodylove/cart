@@ -13,6 +13,7 @@ const show = document.querySelector(".show");
 const showC = document.querySelector(".show-c");
 const cart = document.querySelector(".cart");
 const home = document.querySelector(".home");
+const search = document.querySelector(".search");
 const getStore = JSON.parse(localStorage.getItem("cart")) || [];
 getStore ? (cart.textContent = getStore.length) : console.log("nothing");
 // const orderShirts = [];
@@ -94,12 +95,14 @@ function showAllItems(items, g) {
          </div>
  </div>`;
   });
+
   g.innerHTML = showAllShirts.join("");
 }
 showAllItems(allBags, bagCon);
 showAllItems(allCaps, capCon);
 showAllItems(allGlass, glassCon);
 showAllItems(allShirts, shirtCon);
+const j = [...allBags, ...allCaps, ...allShirts, ...allGlass];
 
 const subItem = document.querySelector(".sub");
 const addItem = document.querySelector(".add");
@@ -224,6 +227,56 @@ home.addEventListener("click", () => {
   capCon.style.display = "flex";
 });
 
+search.addEventListener("keyup", searchItem);
+
+function searchItem(show) {
+  let pass = j.filter((p) => {
+    let searchValue = search.value.toLowerCase();
+    if (p.name.match(searchValue)) {
+      return p;
+    } else {
+      searchValue == p;
+    }
+  });
+  console.log(pass);
+  const Display = pass.map(() => {
+    return ` <div class="p-2 shadow-md  my-3 ">
+    <div class="lg:flex flex-col">
+     <img src="${shirts.shirt}" alt="" class="w-[300px] h-[200px] shirt" />
+    <div class="flex justify-between w-[100%] items-center p-3">
+    <div class="flex items-center justify-center flex-col">
+    <span class="shirt-name">${shirts.name}</span>
+      <span class="flex items-center">
+      <span>$</span> <span class="font-bold text-xl price">${shirts.price}</span>
+      </span>
+        
+      </div>
+      <div>
+        <span class="text-gray-200"><strike>${shirts.discount}</strike></span>
+      </div>
+      </div>
+      <div class="flex pl-2 w-auto justify-center">
+      <button
+        type="button"
+        class="bg-gray-200 rounded-lg w-[51%] flex justify-between items-center p-2 btn1 hidden"
+        >
+        <span class="text-orange-500 text-xl font-bold sub">-</span>
+        <span class="content">0</span>
+        <span class="text-orange-500 text-xl font-bold add">+</span>
+      </button>
+      <button
+        type="button"
+        class="bg-orange-500 rounded-lg w-[51%] h-13 flex justify-between items-center p-2 btn2"
+      >
+        <span class="flex justify-center w-full items-center text-white"
+          ><i class="fas fa-shopping-cart px-4"></i>Add to cart</span
+          >
+          </button>
+          </div>
+          </div>
+  </div>`;
+  });
+}
 // show.innerHTML = showShirts.join("");
 // let allOrder = orderShirts.map((p) => {
 //   return parseInt(p.price);
