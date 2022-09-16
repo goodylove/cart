@@ -14,6 +14,8 @@ const showC = document.querySelector(".show-c");
 const cart = document.querySelector(".cart");
 const home = document.querySelector(".home");
 const search = document.querySelector(".search");
+const first = document.querySelector(".first");
+const time = document.querySelector(".time");
 let getStore = JSON.parse(localStorage.getItem("cart")) || [];
 getStore ? (cart.textContent = getStore.length) : console.log("nothing");
 let sum;
@@ -192,6 +194,7 @@ cart.addEventListener("click", () => {
       showC.style.transform = "translateY(0px)";
       showC.style.height = "100%";
       // showC.style.top = "30px";
+
       showC.style.transition = "0.4s";
       show.innerHTML = boughtItem.join(" ");
       let allOrder = got.map((p) => {
@@ -353,6 +356,11 @@ function searchItem() {
   displayAl(glassCon);
   displayAl(shirtCon);
 }
+time.addEventListener("click", () => {
+  showC.style.transform = "translateY(-300px)";
+  showC.style.transition = "0.4s";
+  showC.style.height = "0%";
+});
 
 // show.innerHTML = showShirts.join("");
 // let allOrder = orderShirts.map((p) => {
