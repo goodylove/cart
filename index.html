@@ -9,23 +9,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <script src="index.js" defer></script>
+
     <title>E-commerce product page</title>
   </head>
   <body>
     <!-- header section starts here-->
 
-    <nav class="flex justify-center items-center fixed w-full bg-[#ffff]">
-      <div class="flex justify-between w-full h-auto p-5">
-        <div class="flex w-full justify-evenly w-5/12 items-center">
-          <span> <i class="fas fa-bars text-xl"></i></span>
-          <span class="font-bold text-2xl">Shirts</span>
+    <nav class="flex justify-center items-center fixed w-full bg-orange-500 z-50">
+    
+      <div class="flex justify-evenly w-11/12 h-auto p-3">
+        <div class="w-full">
+          <div
+            class="flex w-full justify-evenly w-5/12 items-center xl:hidden lg:hidden md:hidden"
+          >
+            <span> <i class="fas fa-bars text-xl hambuger"></i></span>
+            <span class="font-bold text-2xl"></span>
+          </div>
+          <div class="flex w-[50%] hidden xl:block lg:block md:block">
+            <ul
+              class="flex justify-between items-center w-full gap-1 text-xl font-bold text-white"
+            >
+              <li class="home hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Home</a></li>
+              <li class="glas hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Glasses</a></li>
+              <li class="big hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Bags</a></li>
+              <li class="capss hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Caps</a></li>
+              <li class="shit hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Shirts</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="flex items-center justify-center px-2">
+        <div class="flex justify-center m-auto pb-2"></div>
+          <input
+            type="search"
+            placeholder="search..."
+            class="h-9 w-25 rounded-lg bg-gray-100 text-start p-2 shadow-md outline-none search"
+          />
+        </div>
+        <div
+          class="flex items-center justify-around w-[50%] xl:w-auto lg:w-auto md:w-auto"
+        >
           <span class="px-3 relative"
             ><i class="fas fa-shopping-cart"></i>
             <span
-              class="absolute bg-red-500 w-4 h-4 rounded-full left-5 text-white p-1 bottom-3 flex justify-center items-center cart text-sm"
+              class="absolute bg-red-500 w-5 h-5 rounded-full left-5 text-white p-1 bottom-3 flex justify-center items-center cart text-sm"
               >0</span
             >
           </span>
@@ -33,77 +58,105 @@
             <img
               src="./imges/testimonal.3.jpg"
               alt="profile-image"
-              class="h-3 w-3 rounded-full"
+              class="h-4 w-4 rounded-full"
             />
           </div>
         </div>
       </div>
     </nav>
-
+      <!-- mobile menue -->
+      <div class="menu bg-slate-500 absolute h-auto w-6/12  top-12 z-50 flex justify-around transition-transform
+       translate-x-[-400px] xl:hidden lg:hidden md:hidden">
+       
+        <ul class="flex flex-col h-10/12 justify-between  w-full  text-xl font-bold text-white p-2 ">
+          <li class="home1  p-5 hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Home</a></li>
+          <li class=" glas1 p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Glasses</a></li>
+          <li class=" big1  p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Bags</a></li>
+          <li class="capss1 p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Caps</a></li>
+          <li class="shit1  p-5 hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Shirts</a></li>
+        </ul>
+        <span class="flex justify-end"><i class="fas fa-times text-2xl p-3 mobile-time text-white"></i></span>
+      </div>
     <!-- header section end here -->
-    <!-- slider sectoins starts here -->
-    <div class="pt-20 relative flex justify-center overflow-hidden w-full">
-      <div class="w-[500px] flex items-center slider-con relative"></div>
-      <div class="absolute top-[59%] w-full cursor-pointer">
-        <div class="left">
-          <i
-            class="fas fa-arrow-left left text-2xl absolute left-[15px] hover:bg-orange-300 rounded-full w-7 p-1 h-7"
-          ></i>
+    <div class="pt-20 relative" >
+      <div>
+      <div class="first h-full">
+        <!-- shirts section -->
+        <div class="flex justify-center w-auto">
+          <div
+            class="shirt-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+           
+          ></div>
         </div>
-        <div class="right">
-          <i
-            class="fas fa-arrow-right right text-2xl absolute left-[90%] hover:bg-orange-300 rounded-full w-7 p-1 h-7"
-          ></i>
+        <!-- shirts end here -->
+
+        <!-- bags section starts here -->
+
+        <div class="flex justify-center w-auto">
+          <div
+            class="bag-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+            
+          ></div>
+        </div>
+        <!-- bags ends here -->
+
+        <!-- glass section starts here -->
+        <div class="flex justify-center w-auto">
+          <div
+            class="glasses-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+           
+          ></div>
+        </div>
+        <!-- glass ends here -->
+        <!-- shoes start herer -->
+        <div class="flex justify-center w-auto">
+          <div class="shoes-con"></div>
+        </div>
+        <!-- shoes ends herer -->
+
+        <!-- wristwatch  starts here-->
+        <div class="flex justify-center w-auto">
+          <div
+            class="watch-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+           
+          ></div>
+        </div>
+        <!-- wristwatch  ends here-->
+        <!-- caps starts here -->
+        <div class="flex justify-center w-auto">
+          <div
+            class="cap-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
+           
+          ></div>
+        </div>
+
+        <!-- caps ends here -->
+      </div>
+        <div class="w-full h-full flex justify-center">
+          <div
+            class="max-h-[100vh] w-full fixed overflow-y-scroll top-10 bg-slate-100 translate-y-[-300px] transition-transform show-c justify-center px-10 "
+          ><span class="flex  justify-end h-[50px] mt-10">
+            <i class="fas fa-times text-2xl time"></i>
+          </span>
+          <div class="flex justify-center bnt">
+            <!-- <span>total-price <span class="total-shirt"></span></span> -->
+            <button
+              class="bg-orange-500 w-[40%] rounded-md text-white h-[35px] "
+            >
+              <span>Checkout =</span>
+              <span class="total-shirt"></span>
+            </button>
+          </div>
+            <div class="show flex  flex-wrap justify-evenly w-auto xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"></div>
+           
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- slider sections ends here -->
-    <!-- shirts company -->
-    <div class="p-3">
-      <span class="text-orange-500 font-bold">SHIRTS COMPANY</span>
-    </div>
-    <div class="flex justify-center p-3">
-      <p class="text-sm font-bold">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quod
-        eveniet dolorem atque, molestiae eaque illo laudantium consectetur
-        expedita itaque?
-      </p>
-    </div>
-    <!-- pirces -->
-    <div class="flex justify-between items-center p-3">
-      <div class="w-[40%] flex justify-between items-center">
-        <span class="font-bold text-2xl">$125.00</span>
-        <span class="rounded-lg h-6 px-1 w-10 bg-pink-100 text-orange-400"
-          >50%</span
-        >
-      </div>
-      <div>
-        <span class="text-gray-200"><strike>$250.00</strike></span>
-      </div>
-    </div>
-    <!-- button add and reduce  -->
-    <div>
-      <div class="flex justify-center items-center w-full p-3">
-        <button
-          type="button"
-          class="bg-gray-200 rounded-lg w-[100%] h-13 flex justify-between items-center p-2 btn1 hidden"
-        >
-          <span class="text-orange-500 text-xl font-bold sub">-</span>
-          <span class="content">0</span>
-          <span class="text-orange-500 text-xl font-bold add">+</span>
-        </button>
-      </div>
-      <div class="flex justify-center items-center w-full p-3">
-        <button
-          type="button"
-          class="bg-orange-500 rounded-lg w-[100%] h-13 flex justify-between items-center p-2 btn2"
-        >
-          <span class="flex justify-center w-full items-center text-white"
-            ><i class="fas fa-shopping-cart px-4"></i>Add to cart</span
-          >
-        </button>
-      </div>
-    </div>
+    <script src="./javascript files/shirts.js" type="module"></script>
+    <script src="./javascript files/bag.js" type="module"></script>
+    <script src="./javascript files/cap.js" type="module"></script>
+    <script src="./javascript files/glasses.js" type="module"></script>
   </body>
 </html>
