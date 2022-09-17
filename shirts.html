@@ -22,18 +22,18 @@
           <div
             class="flex w-full justify-evenly w-5/12 items-center xl:hidden lg:hidden md:hidden"
           >
-            <span> <i class="fas fa-bars text-xl"></i></span>
+            <span> <i class="fas fa-bars text-xl hambuger"></i></span>
             <span class="font-bold text-2xl"></span>
           </div>
           <div class="flex w-[50%] hidden xl:block lg:block md:block">
             <ul
               class="flex justify-between items-center w-full gap-1 text-xl font-bold text-white"
             >
-              <li class="home"><a href="#">Home</a></li>
-              <li class="glas"><a href="#">Glasses</a></li>
-              <li class="big"><a href="#">Bags</a></li>
-              <li class="capss"><a href="#">Caps</a></li>
-              <li class="shit"><a href="#">Shirts</a></li>
+              <li class="home hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Home</a></li>
+              <li class="glas hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Glasses</a></li>
+              <li class="big hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Bags</a></li>
+              <li class="capss hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Caps</a></li>
+              <li class="shit hover:bg-slate-500 hover:w-[15%] hover:p-1 hover:rounded-lg"><a href="#">Shirts</a></li>
             </ul>
           </div>
         </div>
@@ -65,27 +65,27 @@
       </div>
     </nav>
       <!-- mobile menue -->
-      <div class="menu bg-red-500 absolute h-auto w-6/12 top-0 z-50 flex justify-around transition-transform
-       translate-y-[-300PX]">
+      <div class="menu bg-slate-500 absolute h-auto w-6/12  top-12 z-50 flex justify-around transition-transform
+       translate-x-[-400px] xl:hidden lg:hidden md:hidden">
        
-        <ul class="block h-full justify-between items-center w-full  text-xl font-bold text-white p-3 ">
-          <li class="home"><a href="#">Home</a></li>
-          <li class="glas pt-3"><a href="#">Glasses</a></li>
-          <li class="big pt-3"><a href="#">Bags</a></li>
-          <li class="capss pt-3"><a href="#">Caps</a></li>
-          <li class="shit pt-3"><a href="#">Shirts</a></li>
+        <ul class="flex flex-col h-10/12 justify-between  w-full  text-xl font-bold text-white p-2 ">
+          <li class="home1  p-5 hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Home</a></li>
+          <li class=" glas1 p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Glasses</a></li>
+          <li class=" big1  p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Bags</a></li>
+          <li class="capss1 p-5  hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Caps</a></li>
+          <li class="shit1  p-5 hover:bg-gray-100 hover:w-full hover:rounded-md hover:p-3"><a href="#">Shirts</a></li>
         </ul>
-        <span class="flex justify-end"><i class="fas fa-times text-2xl p-3"></i></span>
+        <span class="flex justify-end"><i class="fas fa-times text-2xl p-3 mobile-time text-white"></i></span>
       </div>
     <!-- header section end here -->
-    <div class="pt-20 relative" id="home">
+    <div class="pt-20 relative" >
       <div>
       <div class="first h-full">
         <!-- shirts section -->
         <div class="flex justify-center w-auto">
           <div
             class="shirt-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
-            id="shit"
+           
           ></div>
         </div>
         <!-- shirts end here -->
@@ -95,7 +95,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="bag-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
-            id="bag"
+            
           ></div>
         </div>
         <!-- bags ends here -->
@@ -104,7 +104,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="glasses-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
-            id="glass"
+           
           ></div>
         </div>
         <!-- glass ends here -->
@@ -118,7 +118,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="watch-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
-            id="watch"
+           
           ></div>
         </div>
         <!-- wristwatch  ends here-->
@@ -126,7 +126,7 @@
         <div class="flex justify-center w-auto">
           <div
             class="cap-con xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"
-            id="cap"
+           
           ></div>
         </div>
 
@@ -134,19 +134,21 @@
       </div>
         <div class="w-full h-full flex justify-center">
           <div
-            class="h-0 w-full fixed overflow-y-scroll top-12 bg-slate-100 translate-y-[-300px] transition-transform show-c justify-center px-10 "
+            class="max-h-[100vh] w-full fixed overflow-y-scroll top-10 bg-slate-100 translate-y-[-300px] transition-transform show-c justify-center px-10 "
           ><span class="flex  justify-end h-[50px] mt-10">
             <i class="fas fa-times text-2xl time"></i>
           </span>
+          <div class="flex justify-center bnt">
+            <!-- <span>total-price <span class="total-shirt"></span></span> -->
+            <button
+              class="bg-orange-500 w-[40%] rounded-md text-white h-[35px] "
+            >
+              <span>Checkout =</span>
+              <span class="total-shirt"></span>
+            </button>
+          </div>
             <div class="show flex  flex-wrap justify-evenly w-auto xl:flex xl:w-12/12 xl:mx-3 xl:flex-wrap xl:justify-between lg:w-10/12 lg:flex lg:flex-wrap lg:justify-around lg:mx-3 md:flex md:justify-evenly md:w-[88%] md:flex-wrap sm:w-auto"></div>
-            <div class="flex justify-center bnt">
-              <button
-                class="bg-orange-500 w-[30%] rounded-md text-white h-[35px] "
-              >
-                <span>total price =</span>
-                <span class="total-shirt"></span>
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>

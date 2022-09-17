@@ -2,9 +2,13 @@ import allBags from "./bag.js";
 import allCaps from "./cap.js";
 import allGlass from "./glasses.js";
 const navSh = document.querySelector(".shit");
+const navSh1 = document.querySelector(".shit1");
 const navGl = document.querySelector(".glas");
+const navGl1 = document.querySelector(".glas1");
 const navCap = document.querySelector(".capss");
+const navCap1 = document.querySelector(".capss1");
 const navBag = document.querySelector(".big");
+const navBag1 = document.querySelector(".big1");
 const shirtCon = document.querySelector(".shirt-con");
 const capCon = document.querySelector(".cap-con");
 const glassCon = document.querySelector(".glasses-con");
@@ -13,12 +17,25 @@ const show = document.querySelector(".show");
 const showC = document.querySelector(".show-c");
 const cart = document.querySelector(".cart");
 const home = document.querySelector(".home");
+const home1 = document.querySelector(".home1");
 const search = document.querySelector(".search");
 const first = document.querySelector(".first");
 const time = document.querySelector(".time");
+const ham = document.querySelector(".hambuger");
+const menu = document.querySelector(".menu");
+const mobileTimes = document.querySelector(".mobile-time");
 let getStore = JSON.parse(localStorage.getItem("cart")) || [];
 getStore ? (cart.textContent = getStore.length) : console.log("nothing");
 let sum;
+
+ham.addEventListener("click", () => {
+  menu.style.transform = "translateX(0px)";
+  menu.style.opacity = "1";
+});
+mobileTimes.addEventListener("click", () => {
+  menu.style.transform = "translateX(-400px)";
+});
+
 // const orderShirts = [];
 
 const allShirts = [
@@ -192,7 +209,7 @@ cart.addEventListener("click", () => {
      </div>`;
       });
       showC.style.transform = "translateY(0px)";
-      showC.style.height = "100%";
+      showC.style.height = "100vh";
       // showC.style.top = "30px";
 
       showC.style.transition = "0.4s";
@@ -221,6 +238,7 @@ cart.addEventListener("click", () => {
               priceS: shirtPrice.textContent,
               imgS: shirtImg.src,
             };
+
             getStore = getStore.filter((p) => {
               let ret = JSON.stringify(p) !== JSON.stringify(items);
               return ret;
@@ -239,6 +257,9 @@ cart.addEventListener("click", () => {
     shoItem();
 
     // array.reduce method
+  }
+  if (cart.textContent > 0) {
+    showC.style.display = "block";
   }
 });
 
@@ -263,9 +284,9 @@ function showNav() {
       bagCon.style.display = "none";
       capCon.style.display = "flex";
     } else {
-      glassCon.style.display = "block";
-      shirtCon.style.display = "block";
-      bagCon.style.display = "block";
+      glassCon.style.display = "flex";
+      shirtCon.style.display = "flex";
+      bagCon.style.display = "flex";
     }
   });
   navSh.addEventListener("click", () => {
@@ -275,9 +296,9 @@ function showNav() {
       capCon.style.display = "none";
       shirtCon.style.display = "flex";
     } else {
-      glassCon.style.display = "block";
-      bagCon.style.display = "block";
-      capCon.style.display = "block";
+      glassCon.style.display = "flex";
+      bagCon.style.display = "flex";
+      capCon.style.display = "flex";
     }
   });
   navGl.addEventListener("click", () => {
@@ -287,11 +308,12 @@ function showNav() {
       capCon.style.display = "none";
       glassCon.style.display = "flex";
     } else {
-      bagCon.style.display = "block";
-      shirtCon.style.display = "block";
-      capCon.style.display = "block";
+      bagCon.style.display = "flex";
+      shirtCon.style.display = "flex";
+      capCon.style.display = "flex";
     }
   });
+
   home.addEventListener("click", () => {
     shirtCon.style.display = "flex";
     bagCon.style.display = "flex";
@@ -299,6 +321,7 @@ function showNav() {
     capCon.style.display = "flex";
   });
 }
+showNav();
 search.addEventListener("keyup", searchItem);
 
 function searchItem() {
@@ -361,7 +384,64 @@ time.addEventListener("click", () => {
   showC.style.transition = "0.4s";
   showC.style.height = "0%";
 });
+function mobileNav() {
+  navBag1.addEventListener("click", () => {
+    if (glassCon || shirtCon || capCon) {
+      glassCon.style.display = "none";
+      shirtCon.style.display = "none";
+      capCon.style.display = "none";
+      bagCon.style.display = "block";
+    } else {
+      // glassCon.style.display = "flex";
+      // shirtCon.style.display = "flex";
+      // capCon.style.display = "flex";
+    }
+  });
+  navCap1.addEventListener("click", () => {
+    if (glassCon || shirtCon || bagCon) {
+      glassCon.style.display = "none";
+      shirtCon.style.display = "none";
+      bagCon.style.display = "none";
+      capCon.style.display = "block";
+    } else {
+      // glassCon.style.display = "flex";
+      // shirtCon.style.display = "flex";
+      // bagCon.style.display = "flex";
+    }
+  });
+  navSh1.addEventListener("click", () => {
+    if (glassCon || bagCon || capCon) {
+      glassCon.style.display = "none";
+      bagCon.style.display = "none";
+      capCon.style.display = "none";
+      shirtCon.style.display = "block";
+    } else {
+      // glassCon.style.display = "flex";
+      // bagCon.style.display = "flex";
+      // capCon.style.display = "flex";
+    }
+  });
+  navGl1.addEventListener("click", () => {
+    if (bagCon || shirtCon || capCon) {
+      bagCon.style.display = "none";
+      shirtCon.style.display = "none";
+      capCon.style.display = "none";
+      glassCon.style.display = "block";
+    } else {
+      // bagCon.style.display = "flex";
+      // shirtCon.style.display = "flex";
+      // capCon.style.display = "flex";
+    }
+  });
 
+  home1.addEventListener("click", () => {
+    shirtCon.style.display = "block";
+    bagCon.style.display = "block";
+    glassCon.style.display = "block";
+    capCon.style.display = "block";
+  });
+}
+mobileNav();
 // show.innerHTML = showShirts.join("");
 // let allOrder = orderShirts.map((p) => {
 //   return parseInt(p.price);
